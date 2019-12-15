@@ -152,7 +152,7 @@
     border-color: lightblue;
   }
   #contact_message {
-		background:  url(../img/email-icon.png) no-repeat;
+    background:  url(../img/email-icon.png) no-repeat;
     background-position-x: 99%;
     background-position-y: 97%;
     background-size: 30px;
