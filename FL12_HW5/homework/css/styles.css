@@ -2,13 +2,6 @@
  * Feel free to change name of colors if you need it
  * Feel free to add new colors if you need it
  */
-:root {
-  --bg-color--dark: #0b192f;
-  --bg-color--header: #024161;
-  --link: #fff;
-  --link--hover: #1f52a4;
-  --bg-footer-color: #024161;
-}
 .pad_left {
   padding-left: 15px;
 }
@@ -17,25 +10,25 @@
 }
 body {
   font-family: roboto;
-  background-color: var(--bg-color--dark);
+  background-color: #0b192f;
   max-width: 1400px;
   padding: 0;
   margin: 0 auto;
 }
 .post-1 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-2 {
-	background: #9bb800;
+  background: #9bb800;
 }
 .post-3 {
-	background: #ed5120;
+  background: #ed5120;
 }
 .post-4 {
-	background: #9d27b0;
+  background: #9d27b0;
 }
 .post-5 {
-	background: #2d95bb;
+  background: #2d95bb;
 }
 .wrapper {
   padding: 0.1% 20%;
@@ -63,6 +56,9 @@ body {
   padding: 1em;
   color: white;
 }
+.menu li:hover {
+  background-color: #1f52a4;
+}
 .header_logo {
   color: white;
   font-weight: 300;
@@ -72,7 +68,7 @@ body {
   color: red;
 }
 .header {
-  background-color: var(--bg-color--header);
+  background-color: #024161;
 }
 .description_content {
   position: relative;
@@ -162,7 +158,7 @@ body {
 }
 .footer_content {
   color: white;
-  background-color: var(--bg-footer-color);
+  background-color: #024161;
   display: flex;
   font-weight: 200;
   padding: 5px 20px 5px 20px;
