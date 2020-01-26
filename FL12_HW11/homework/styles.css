@@ -8,7 +8,6 @@ ul {
 .folder:hover, .file:hover {
   background-color: #f2f2f2;
 }
-
 .folder i {
   color: #EABC0A;
 }
@@ -21,4 +20,10 @@ ul {
 .empty {
   font-style: italic;
   padding-left: 10px;
+}
+.close {
+  display: none;
+}
+.open {
+  display: block
 }

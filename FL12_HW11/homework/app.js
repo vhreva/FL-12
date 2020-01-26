@@ -39,14 +39,15 @@ const rootNode = document.getElementById('root');
 
 function drawTree(structure, elem) {
   let ul = document.createElement('ul');
+  ul.classList.add('close')
+
   for (let item of structure) {
     let li = document.createElement('li');
     let div = document.createElement('div');
     let icon = document.createElement('i')
-
-    icon.classList.add('material-icons');
     let title = document.createElement('span')
 
+    icon.classList.add('material-icons');
     li.appendChild(div)
     div.appendChild(icon)
     div.appendChild(title)
@@ -56,17 +57,21 @@ function drawTree(structure, elem) {
       div.classList.toggle('folder')
       icon.innerText = 'folder'
       div.addEventListener('click', function() {
-        if (icon.innerText === 'folder') {
-          icon.innerText = 'folder_open'
+        if (event.target.nextSibling.classList.contains('close')) {
+            event.target.nextSibling.classList.remove('close');
+            event.target.nextSibling.classList.toggle('open');
+            icon.innerText = 'folder_open'
         } else {
-          icon.innerText = 'folder'
+            event.target.nextSibling.classList.remove('open');
+            event.target.nextSibling.classList.toggle('close');
+            icon.innerText = 'folder'
         }
       });
       if (item.children) {
         drawTree(item.children, li)
       } else {
         let empty = document.createElement('div');
-        empty.classList.add('empty');
+        empty.classList.add('empty', 'close');
         empty.innerText = 'Folder is empty';
         li.appendChild(empty);
       }
@@ -74,9 +79,12 @@ function drawTree(structure, elem) {
       div.classList.toggle('file')
       icon.innerHTML = 'insert_drive_file'
     }
-  ul.appendChild(li)
-}
+    ul.appendChild(li)
+  }
   elem.appendChild(ul)
+  if (ul.parentNode === rootNode) {
+    ul.classList.toggle('open')
+  }
 }
 
 drawTree(structure, rootNode)
