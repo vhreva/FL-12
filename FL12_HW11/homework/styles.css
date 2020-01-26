@@ -1,0 +1,24 @@
+ul {
+  list-style-type:none;
+  padding-left: 20px;
+}
+.folder {
+  cursor: pointer;
+}
+.folder:hover, .file:hover {
+  background-color: #f2f2f2;
+}
+
+.folder i {
+  color: #EABC0A;
+}
+.file i {
+  color: #BBBBBB;
+}
+.material-icons {
+  vertical-align: sub;
+}
+.empty {
+  font-style: italic;
+  padding-left: 10px;
+}
