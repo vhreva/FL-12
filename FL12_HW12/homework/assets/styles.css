@@ -1,0 +1,38 @@
+* {
+  padding: 0;
+  margin: 0 auto;
+}
+.header {
+  background-color: lightgrey;
+  padding: 10px 20px;
+  display: flex;
+}
+.add-btn {
+  padding: 8px;
+  background-color: grey;
+  color: white;
+  font-size: 15px;
+  border: none;
+  margin-right: 5px;
+}
+#termin {
+  padding: 7px 35px;
+}
+#cancel, #save_change, #add_termin, #termin {
+  display: none;
+}
+.termins {
+  padding-top: 80px;
+  text-align: center;
+  margin: 0px 380px;
+}
+.term {
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+.term h2 {
+  padding: 10px;
+}
+.term:hover {
+  cursor: pointer;
+}
